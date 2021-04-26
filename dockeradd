@@ -1,0 +1,9 @@
+#!/bin/bash
+if test -z "$2" ;then
+	echo "Usage : $0 <USERNAME>  <PASSWORD>"
+	exit 
+fi
+useradd -m -s /bin/docker.sh -G docker $1
+echo "$2
+$2"| passwd $1
+
